@@ -10,24 +10,24 @@
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
-// Drivetrain           drivetrain    1, 2, 5         
 // Controller1          controller                    
-// MotorGroup4          motor_group   4, 7            
+// MotorGroup4          motor_group   5, 7            
 // MotorGroup8          motor_group   8, 9            
 // Controller2          controller                    
 // leftDriveMotor       motor         15              
 // rightDriveMotor      motor         16              
 // ptoRightMotor        motor         17              
 // ptoLeftMotor         motor         18              
-// ptoRightPh           digital_out   A               
-// ptoLeftPh            digital_out   B               
+// ptoPh                digital_out   E               
 // pickupMotor          motor         20              
-// PoleTopper           digital_out   D               
+// InertialSens         inertial      11              
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 
 #include "driverControl.h"
+
 #include "auton.h"
+
 #include "vex.h"
 #include <iostream>
 
@@ -38,6 +38,7 @@ int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
 
+  InertialSens.calibrate();
 
   competition comsw;
 

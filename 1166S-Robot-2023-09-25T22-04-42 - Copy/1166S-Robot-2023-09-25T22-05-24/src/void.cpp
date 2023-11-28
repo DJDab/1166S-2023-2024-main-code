@@ -1,12 +1,15 @@
-//int rightSpeed = 100;
-  bool ptoEnabled = true;
+
+/*#include "vex.h"
+
+void driverControl(){
+
+
+   bool ptoEnabled = true;
   //double forward ;
   //double turn ;
 
   //setting commands for the pnematics
-  ptoLeftPh.set(false);
-  ptoRightPh.set(false);
-  PoleTopper.set(false);
+
 
   // setting commands for motor group 6 elevation
     MotorGroup4.setMaxTorque(100,percent);
@@ -52,12 +55,6 @@
   
     if(ptoEnabled == true){
 
-      if (Controller2.ButtonUp.pressing()){
-        PoleTopper.set(true);
-      }else{
-        PoleTopper.set(false);
-      }
-
         //code for pickup fork
       if (Controller2.ButtonR2.pressing()){
         pickupMotor.setVelocity(30,percent);
@@ -96,7 +93,7 @@
         rightDriveMotor.spin(forward);
 
         //turning while moving foreward  
-        /*      
+            
         if(Controller1.Axis4.position(percent) >= 20){
           rightDriveMotor.setVelocity(25,percent);
         }else if(Controller1.Axis4.position(percent) <= -20){
@@ -105,14 +102,14 @@
           leftDriveMotor.setVelocity(100,percent);
           rightDriveMotor.setVelocity(100,percent);
         }
-          */
+          
       //reverse button movment
       } else if(Controller1.ButtonL2.pressing()){
         leftDriveMotor.spin(reverse);
         rightDriveMotor.spin(reverse);
 
         //turning in reverse
-        /*
+        
         if(Controller1.Axis4.position(percent) >= 20){
           rightDriveMotor.setVelocity(25,percent);
         }else if(Controller1.Axis4.position(percent) <= -20){
@@ -121,7 +118,7 @@
           leftDriveMotor.setVelocity(100,percent);
           rightDriveMotor.setVelocity(100,percent);
         }
-          */
+          
       }else{
         //leftDriveMotor.setVelocity(100,percent);
         //rightDriveMotor.setVelocity(100,percent);
@@ -141,8 +138,8 @@
       }
     
       if (Controller1.ButtonR1.pressing()){
-        ptoLeftMotor.spin(reverse);
-        ptoRightMotor.spin(forward);
+        ptoLeftMotor.spin(forward);
+        ptoRightMotor.spin(reverse);
       }else{
         ptoLeftMotor.stop();
         ptoRightMotor.stop();
@@ -150,17 +147,15 @@
 
 
       if(Controller1.ButtonA.pressing()){
-
-        if (ptoLeftMotor.position(degrees) != 0){
-          ptoLeftMotor.spinToPosition(0,degrees);
-        }
-        if (ptoRightMotor.position(degrees) != 0){
-          ptoRightMotor.spinToPosition(0,degrees);
-        }
+          ptoRightMotor.spinToPosition(90,degrees,50, rpm,false);
+          ptoLeftMotor.spinToPosition(90,degrees,50,rpm,false);
+          ptoRightMotor.spinToPosition(90,degrees,50,rpm,false);
+          ptoLeftMotor.spinToPosition(90,degrees,50,rpm,false);
+        
+      
       
         ptoEnabled = false;
-        ptoLeftPh.set(true);
-        ptoRightPh.set(true);
+        
 
 
         //settings for motors
@@ -177,11 +172,6 @@
     //driving when PTO is dissabled all 4 motors are working
     }else if(ptoEnabled == false){
 
-      if (Controller2.ButtonUp.pressing()){
-        PoleTopper.set(true);
-      }else{
-        PoleTopper.set(false);
-      }
 
         //code for pickup fork
       if (Controller2.ButtonR2.pressing()){
@@ -221,7 +211,7 @@
         ptoRightMotor.spin(forward);
 
         //turning while moving foreward  
-        /*      
+         
         if(Controller1.Axis4.position(percent) >= 20){
           rightDriveMotor.setVelocity(25,percent);
         }else if(Controller1.Axis4.position(percent) <= -20){
@@ -230,7 +220,7 @@
           leftDriveMotor.setVelocity(100,percent);
           rightDriveMotor.setVelocity(100,percent);
         }
-          */
+          
       //reverse button movment
       } else if(Controller1.ButtonL2.pressing()){
         leftDriveMotor.spin(reverse);
@@ -239,7 +229,7 @@
         ptoRightMotor.spin(reverse);
 
         //turning in reverse
-        /*
+        
         if(Controller1.Axis4.position(percent) >= 20){
           rightDriveMotor.setVelocity(25,percent);
         }else if(Controller1.Axis4.position(percent) <= -20){
@@ -248,7 +238,7 @@
           leftDriveMotor.setVelocity(100,percent);
           rightDriveMotor.setVelocity(100,percent);
         }
-          */
+          
       }else{
         //leftDriveMotor.setVelocity(100,percent);
         //rightDriveMotor.setVelocity(100,percent);
@@ -272,8 +262,7 @@
 
       if(Controller1.ButtonA.pressing()){
         ptoEnabled = true;
-        ptoLeftPh.set(false);
-        ptoRightPh.set(false);
+
 
         //settings for motors
         ptoLeftMotor.setVelocity(100,percent);
@@ -284,14 +273,9 @@
 
       }
 
-    if (Controller2.ButtonUp.pressing()){
-      PoleTopper.set(true);
-    }else{
-      PoleTopper.set(false);
-    }
 
   //swap between PTO true and false, if true motors on drive if false motors on catapult
-   /* if(ptoEnabled == true and Controller1.ButtonA.pressing()){
+   if(ptoEnabled == true and Controller1.ButtonA.pressing()){
     if (ptoLeftMotor.position(degrees) != 0){
       ptoLeftMotor.spinToPosition(0,degrees);
     }
@@ -322,14 +306,10 @@
     ptoRightMotor.setVelocity(100,percent);
     ptoRightMotor.setStopping(coast);
 
-    }*/
+    }
   }
 
-
-
-
-  if poopybutt = true{
-    blah bal blah
   }
 
 }
+*/
