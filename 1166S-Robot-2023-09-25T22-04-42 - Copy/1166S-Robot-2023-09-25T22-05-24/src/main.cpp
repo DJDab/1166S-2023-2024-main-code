@@ -1,3 +1,48 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// MotorGroup4          motor_group   5, 7            
+// MotorGroup8          motor_group   8, 9            
+// Controller2          controller                    
+// leftDriveMotor       motor         15              
+// rightDriveMotor      motor         16              
+// ptoRightMotor        motor         17              
+// ptoLeftMotor         motor         18              
+// ptoPh                digital_out   E               
+// pickupMotor          motor         20              
+// InertialSens         inertial      11              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// MotorGroup4          motor_group   5, 7            
+// MotorGroup8          motor_group   8, 9            
+// Controller2          controller                    
+// leftDriveMotor       motor         15              
+// rightDriveMotor      motor         16              
+// ptoRightMotor        motor         17              
+// ptoLeftMotor         motor         18              
+// ptoPh                digital_out   E               
+// pickupMotor          motor         20              
+// InertialSens         inertial      11              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// MotorGroup4          motor_group   5, 7            
+// MotorGroup8          motor_group   8, 9            
+// Controller2          controller                    
+// leftDriveMotor       motor         15              
+// rightDriveMotor      motor         16              
+// ptoRightMotor        motor         17              
+// ptoLeftMotor         motor         18              
+// ptoPh                digital_out   E               
+// pickupMotor          motor         20              
+// InertialSens         inertial      11              
+// ---- END VEXCODE CONFIGURED DEVICES ----
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
